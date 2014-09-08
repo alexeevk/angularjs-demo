@@ -2,11 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Angular Demo</title>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
 </head>
 <body>
     <div ng-app="angularDemo" ng-cloak>
         <div ng-controller="indexController as model">
-            <div>Author: {{model.person.name | camel}}</div>
+            <div ng-class="myCss">Author: {{model.person.name | camel}}</div>
             <div>Book: {{model.book.title | camel}}</div>
             <div><input ng-model="model.person.name"/></div>
             <br />
