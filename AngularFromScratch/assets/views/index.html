@@ -3,8 +3,16 @@
 <head>
     <title></title>
 </head>
-    <body>
-        <script type="text/javascript" src="/scripts/angular.js"></script>
-        <script type="text/javascript" src="/assets/application.js"></script>
-    </body>
+<body>
+    <div ng-app="angularDemo" ng-cloak>
+        <div ng-controller="indexController as model">
+            <div>Author: {{model.person.name}}</div>
+            <div>Book: {{model.book.title}}</div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/scripts/angular.js"></script>
+    <script type="text/javascript" src="/assets/application.js"></script>
+    <script type="text/javascript" src="/assets/controllers/indexController.js"></script>
+</body>
 </html>
