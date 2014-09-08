@@ -1,18 +1,29 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <title>Angular Demo</title>
 </head>
 <body>
     <div ng-app="angularDemo" ng-cloak>
         <div ng-controller="indexController as model">
             <div>Author: {{model.person.name}}</div>
             <div>Book: {{model.book.title}}</div>
+            <div><input ng-model="model.person.name"/></div>
+            <br />
+            <button ng-click="model.getPosts()">Get Posts</button>
+            <div style="margin-top: 20px;">
+                <h2>Posts</h2>
+                <div ng-repeat="post in model.posts" style="margin-bottom: 10px;">
+                    <div><b>{{post.title}}</b></div>
+                    <div>{{post.body}}</div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script type="text/javascript" src="/scripts/angular.js"></script>
     <script type="text/javascript" src="/assets/application.js"></script>
     <script type="text/javascript" src="/assets/controllers/indexController.js"></script>
+    <script type="text/javascript" src="/assets/services/dataService.js"></script>
 </body>
 </html>
