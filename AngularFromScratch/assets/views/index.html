@@ -7,7 +7,7 @@
 <body>
     <div ng-app="angularDemo" ng-cloak>
         <div ng-controller="indexController as model">
-            <div ng-class="myCss">Author: {{model.person.name | camel}}</div>
+            <div ng-class="{thePerson : isThePerson }">Author: {{model.person.name | camel}}</div>
             <div>Book: {{model.book.title | camel}}</div>
             <div><input ng-model="model.person.name"/></div>
             <br />
@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-
+    
     <script type="text/javascript" src="/scripts/angular.js"></script>
     <script type="text/javascript" src="/assets/application.js"></script>
     <script type="text/javascript" src="/assets/filters/camelFilter.js"></script>
