@@ -1,0 +1,5 @@
+﻿<div ng-controller="personController as model">
+    <div ng-class="{thePerson : isThePerson }">Author: {{model.person.name | camel}}</div>
+    <div>Book: {{model.book.title | camel}}</div>
+    <div><input ng-model="model.person.name" /></div>
+</div>

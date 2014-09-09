@@ -4,28 +4,16 @@
     <title>Angular Demo</title>
     <link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
 </head>
-<body>
-    <div ng-app="angularDemo" ng-cloak>
-        <div ng-controller="indexController as model">
-            <div ng-class="{thePerson : isThePerson }">Author: {{model.person.name | camel}}</div>
-            <div>Book: {{model.book.title | camel}}</div>
-            <div><input ng-model="model.person.name"/></div>
-            <br />
-            <button ng-click="model.getPosts()">Get Posts</button>
-            <div style="margin-top: 20px;">
-                <h2>Posts</h2>
-                <div ng-repeat="post in model.posts" style="margin-bottom: 10px;">
-                    <div><b>{{post.title}}</b></div>
-                    <div>{{post.body}}</div>
-                </div>
-            </div>
+    <body>
+        <div ng-app="angularDemo">
+            <div ng-view></div>
         </div>
-    </div>
-    
-    <script type="text/javascript" src="/scripts/angular.js"></script>
-    <script type="text/javascript" src="/assets/application.js"></script>
-    <script type="text/javascript" src="/assets/filters/camelFilter.js"></script>
-    <script type="text/javascript" src="/assets/controllers/indexController.js"></script>
-    <script type="text/javascript" src="/assets/services/dataService.js"></script>
-</body>
+        <script type="text/javascript" src="/scripts/angular.js"></script>
+        <script type="text/javascript" src="/scripts/angular-route.js"></script>
+        <script type="text/javascript" src="/assets/application.js"></script>
+        <script type="text/javascript" src="/assets/filters/camelFilter.js"></script>
+        <script type="text/javascript" src="/assets/controllers/postsController.js"></script>
+        <script type="text/javascript" src="/assets/controllers/personController.js"></script>
+        <script type="text/javascript" src="/assets/services/dataService.js"></script>
+    </body>
 </html>

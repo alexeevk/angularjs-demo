@@ -1,0 +1,10 @@
+﻿<div ng-controller="postsController as model">
+    <button ng-click="model.getPosts()">Get Posts</button>
+    <div style="margin-top: 20px;">
+        <h2>Posts</h2>
+        <div ng-repeat="post in model.posts" style="margin-bottom: 10px;">
+            <div><b>{{post.title}}</b></div>
+            <div>{{post.body}}</div>
+        </div>
+    </div>
+</div>
