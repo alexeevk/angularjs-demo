@@ -1,9 +1,9 @@
 ﻿<div ng-controller="postsController as model">
     <button ng-click="model.getPosts()">Get Posts</button>
     <div style="margin-top: 20px;">
-        <h2>Posts</h2>
+        <h2 ng-if="model.posts.length > 0">Posts</h2>
         <div ng-repeat="post in model.posts" style="margin-bottom: 10px;">
-            <blog-post posting="post"></blog-post>
+            <blog-post posting="post" message="{{model.controllersScopeMessage}}"></blog-post>
         </div>
     </div>
 </div>
