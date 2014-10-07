@@ -6,7 +6,7 @@
         <div>Current Time: <current-time format="model.format"></current-time></div>
         <hr/>
         <div ng-repeat="post in model.posts" style="margin-bottom: 10px;">
-            <blog-post posting="post" message="{{model.controllersScopeMessage}}"></blog-post>
+            <blog-post posting="post" message="{{model.controllersScopeMessage}}" action="model.postClicked(post)"></blog-post>
         </div>
     </div>
 </div>
