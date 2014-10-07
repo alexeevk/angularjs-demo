@@ -3,5 +3,5 @@
         $routeProvider
                 .when('/posts', { templateUrl: '/assets/views/posts.html', controller: 'postsController' })
                 .when('/person', { templateUrl: '/assets/views/person.html', controller: 'personController' })
-                .otherwise({ redirectTo: '/person' });
+                .otherwise({ redirectTo: '/posts' });
     }]);
