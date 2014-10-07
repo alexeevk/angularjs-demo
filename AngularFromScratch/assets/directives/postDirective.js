@@ -7,9 +7,9 @@
         // combinations are possible 
         restrict: 'E',
         scope: {
-            blogItem: '=posting', // = syntax means that posting is an attribute
-            message: '@', // @ is to just pass a value
-            action: "&",
+            blogItem: '=posting',   // = syntax means that posting is an attribute
+            message: '@',           // @ is to just pass a value
+            action: "&",            // & is used for actions
         },
         templateUrl: '/assets/views/post.html',
 
