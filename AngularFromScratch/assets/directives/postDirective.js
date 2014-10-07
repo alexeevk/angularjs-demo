@@ -1,4 +1,4 @@
-﻿myApp.directive('blogPost', function() {
+﻿myApp.directive('blogPost', function () {
     return {
         // Possible restrictions are
         // E - matches html element
@@ -7,9 +7,11 @@
         // combinations are possible 
         restrict: 'E',
         scope: {
-            blogItem: '=posting',   // = syntax means that posting is an attribute
-            message : '@'           // @ is to just pass a value
+            blogItem: '=posting', // = syntax means that posting is an attribute
+            message: '@', // @ is to just pass a value
+            action: "&",
         },
-        templateUrl: '/assets/views/post.html'
+        templateUrl: '/assets/views/post.html',
+
     };
 });

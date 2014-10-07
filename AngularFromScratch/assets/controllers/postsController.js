@@ -13,4 +13,8 @@
                 });
     }
 
+    this.postClicked = function(posting) {
+        alert(posting.title);
+    }
+
 })

@@ -3,7 +3,7 @@
     <div style="margin-top: 20px;">
         <h2 ng-if="model.posts.length > 0">Posts</h2>
         <div ng-repeat="post in model.posts" style="margin-bottom: 10px;">
-            <blog-post posting="post" message="{{model.controllersScopeMessage}}"></blog-post>
+            <blog-post posting="post" message="{{model.controllersScopeMessage}}" action="model.postClicked(post)"></blog-post>
         </div>
     </div>
 </div>
